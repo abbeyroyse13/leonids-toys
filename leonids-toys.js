@@ -52,4 +52,8 @@ toys.push(fakeFood);
 
 toys.push(car);
 
+for (const toy of toys) {
+    console.log(`The toy maker is ${toy.manufacturer}. His toys all have different textures such as ${toy.texture} and different sizes such as ${toy.size}.`)
+}
+
 console.log(toys);
