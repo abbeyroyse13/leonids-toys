@@ -1,3 +1,5 @@
+const toyToFind = 2
+
 const toys = [{
         id: 1,
         type: "teddy bear",
@@ -52,10 +54,17 @@ toys.push(fakeFood);
 
 toys.push(car);
 
-for (const toy of toys) {
-    toy.price = toy.price + 6.10
+// for (const toy of toys) {
+//     toy.price = toy.price + 6.10
 
-    console.log(`The toy maker is ${toy.manufacturer}. His toys all have different textures such as ${toy.texture} and different sizes such as ${toy.size}. The new price of his toys (depending on the product) are ${toy.price}`)
+//     console.log(`The toy maker is ${toy.manufacturer}. His toys all have different textures such as ${toy.texture} and different sizes such as ${toy.size}. The new price of his toys (depending on the product) are ${toy.price}`)
+// }
+
+for (const toy of toys) {
+    if (toy.id === toyToFind) {
+        toy.price = toy.price + 6.10
+        console.log(`The toy maker is ${toy.manufacturer}. His toys all have different textures such as ${toy.texture} and different sizes such as ${toy.size}. The new price of his toys (depending on the product) are ${toy.price}`)
+    }
 }
 
 console.log(toys);
