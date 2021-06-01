@@ -60,11 +60,31 @@ toys.push(car);
 //     console.log(`The toy maker is ${toy.manufacturer}. His toys all have different textures such as ${toy.texture} and different sizes such as ${toy.size}. The new price of his toys (depending on the product) are ${toy.price}`)
 // }
 
-for (const toy of toys) {
-    if (toy.id === toyToFind) {
-        toy.price = toy.price + 6.10
-        console.log(`The toy maker is ${toy.manufacturer}. His toys all have different textures such as ${toy.texture} and different sizes such as ${toy.size}. The new price of his toys (depending on the product) are ${toy.price}`)
-    }
+// for (const toy of toys) {
+//     if (toy.id === toyToFind) {
+//         toy.price = toy.price + 6.10
+//         console.log(`The toy maker is ${toy.manufacturer}. His toys all have different textures such as ${toy.texture} and different sizes such as ${toy.size}. The new price of his toys (depending on the product) are ${toy.price}`)
+//     }
+// }
+
+const addToyToShop = (newToy) => {
+    const lastIndex = toys.length - 1
+    const currentLastToy = toys[lastIndex]
+    const maxId = currentLastToy.id
+    const idForNewToy = maxId + 1
+
+    newToy.id = idForNewToy
+    toys.push(newToy)
 }
+
+const plushie = {
+    type: "clown plush",
+    manufacturer: "Leonid's Toys",
+    texture: "soft",
+    size: "20 in",
+    price: 25
+}
+
+addToyToShop(plushie);
 
 console.log(toys);
